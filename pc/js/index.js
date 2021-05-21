@@ -138,7 +138,7 @@ function submit(){
 		let phone = $('.login-item input[data-type=phone]').val().trim();
 		let address = $('.login-item input[data-type=address]').val().trim();
 
-		if(name != '' && phone != ''){
+		if(name != '' && phone != '' && phone.length == 11){
 			$.ajax({
 				url: '/api/applyShop.json',
 				type:'post',
@@ -164,7 +164,7 @@ function submit(){
 			})
 		}
 		else{
-			toastFn('请填入姓名和手机号');
+			toastFn('请填入姓名和正确的手机号');
 		}
 	})
 }
