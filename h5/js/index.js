@@ -27,8 +27,8 @@ function scrollFn(){
     let jjItem1 = $('.jjItem').eq(0).length > 0 ? $('.jjItem').eq(0).offset().top - 700 : 0;
     let jjItem2 = $('.jjItem').eq(1).length > 0 ? $('.jjItem').eq(1).offset().top - 700 : 0;
     let jjItem3 = $('.jjItem').eq(2).length > 0 ? $('.jjItem').eq(2).offset().top - 700 : 0;
-    let change = $('.change').length > 0 ? $('.change').offset().top - 400 : 0;
-    let join = $('.join').length > 0 ? $('.join').offset().top - 400 : 0;
+    let change = $('.change').length > 0 ? $('.change').offset().top - 700 : 0;
+    let join = $('.join').length > 0 ? $('.join').offset().top - 700 : 0;
 
     let item2 = $('.item2').eq(1).length > 0 ? $('.item2').eq(1).offset().top - 400 : 0;
     let item3 = $('.item2').eq(2).length > 0 ? $('.item2').eq(2).offset().top - 400 : 0;
@@ -115,21 +115,21 @@ function submit(){
 		let name = $('.login-item input[data-type=name]').val().trim();
 		let phone = $('.login-item input[data-type=phone]').val().trim();
 		let address = $('.login-item input[data-type=address]').val().trim();
-
-		if(name != '' && phone != '' && phone.length == 11){
+        let params ={
+            name : '',
+            applicant : name,
+            phone : phone,
+            address : address,
+            applyInstruction: ''
+        };
+		if(name != '' && /^\d{11}$/.test(phone)){
 			$.ajax({
-				url: '/api/applyShop.json',
+				url: '/static-api/api/applyShop.json',
 				type:'post',
-                dataType:'json',
-				data:{
-					name : '',
-					applicant : name,
-					phone : phone,
-					address : address,
-					applyInstruction: ''
-				},
+				contentType: "application/json;charset=UTF-8",
+                data:JSON.stringify(params),
 				success: function(data){
-					if(data.stauts == 200){
+					if(data.status == 200){
 						toastFn('提交成功');
 					}
 					else{

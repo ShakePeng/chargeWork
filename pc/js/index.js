@@ -45,11 +45,9 @@ function scrollFn() {
     let dt1 = $('.dt-list').eq(1).length > 0 ? $('.dt-list').eq(1).offset().top - 700 : 0;
     let dt2 = $('.dt-list').eq(2).length > 0 ? $('.dt-list').eq(2).offset().top -700 : 0;
 
-    let md1 = $('.cp-con').eq(0).length > 0 ? $('.cp-con').eq(0).offset().top -500 : 0;
-    let md2 = $('.cp-con').eq(1).length > 0 ? $('.cp-con').eq(1).offset().top -450 : 0;
-    let md3 = $('.cp-con').eq(2).length > 0 ? $('.cp-con').eq(2).offset().top -400 : 0;
+    let md2 = $('.cp-con').eq(1).length > 0 ? $('.cp-con').eq(1).offset().top -700 : 0;
+    let md3 = $('.cp-con').eq(2).length > 0 ? $('.cp-con').eq(2).offset().top -700 : 0;
 
-    let sy1 = $('.layout1').length > 0 ? $('.layout1').offset().top -700 : 0;
     let sy2 = $('.layout2').eq(0).length > 0 ? $('.layout2').eq(0).offset().top -700 : 0;
     let sy3 = $('.layout2').eq(1).length > 0 ? $('.layout2').eq(1).offset().top -700 : 0;
     let sy4 = $('.layout2').eq(2).length > 0 ? $('.layout2').eq(2).offset().top -700 : 0;
@@ -57,10 +55,6 @@ function scrollFn() {
     $(window).on('scroll', function () {
         let scrollTop = $(window).scrollTop();
         // 首页
-        if(scrollTop >= sy1){
-            $('.layout1 .left').addClass('anim-left');
-            $('.layout1 .right').addClass('anim-right');
-        }
         if(scrollTop >= sy2){
             $('.layout2 .left').eq(0).addClass('anim-left');
             $('.layout2 .right').eq(0).addClass('anim-right');
@@ -78,10 +72,6 @@ function scrollFn() {
             $('.change .change-item').addClass('anim-bottm');
         }
         // 产品介绍
-        if(scrollTop >= md1){
-            $('.cp-con img').eq(0).addClass('anim-left');
-            $('.cp-con .con-item').eq(0).addClass('anim-right');
-        }
         if(scrollTop >= md2){
             $('.cp-con img').eq(1).addClass('anim-right');
             $('.cp-con .con-item').eq(1).addClass('anim-left');
@@ -138,20 +128,22 @@ function submit(){
 		let phone = $('.login-item input[data-type=phone]').val().trim();
 		let address = $('.login-item input[data-type=address]').val().trim();
 
-		if(name != '' && phone != '' && phone.length == 11){
-			$.ajax({
-				url: '/api/applyShop.json',
-				type:'post',
-                dataType:'json',
-				data:{
-					name : '',
-					applicant : name,
-					phone : phone,
-					address : address,
-					applyInstruction: ''
-				},
+		let params = {
+            name : '',
+            applicant : name,
+            phone : phone,
+            address : address,
+            applyInstruction: ''
+        };
+
+        if(name != '' && /^\d{11}$/.test(phone)){
+            $.ajax({
+                url: '/static-api/api/applyShop.json',
+                type:'post',
+                contentType: "application/json;charset=UTF-8",
+                data:JSON.stringify(params),
 				success: function(data){
-					if(data.stauts == 200){
+					if(data.status == 200){
 						toastFn('提交成功');
 					}
 					else{
