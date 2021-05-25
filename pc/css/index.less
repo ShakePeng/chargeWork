@@ -1,3 +1,4 @@
+@animTime: 1s;
 body {
   min-height: 100%;
   margin: 0 auto;
@@ -85,15 +86,15 @@ a {
         }
 
         &:first-child {
-          animation: animUp ease-in-out 2s;
+          animation: animUp ease-in-out @animTime;
           animation-fill-mode: forwards;
         }
         &:nth-child(2) {
-          animation: animUp ease-in-out 2s 1s;
+          animation: animUp ease-in-out @animTime 0.5s;
           animation-fill-mode: forwards;
         }
         &:nth-child(3) {
-          animation: animUp ease-in-out 2s 2s;
+          animation: animUp ease-in-out @animTime 1s;
           animation-fill-mode: forwards;
         }
       }
@@ -124,14 +125,14 @@ a {
       font-size: 20px;
       padding: 30px 0;
       opacity: 0;
-      animation: animBottom ease-in-out 2s 3s;
+      animation: animBottom ease-in-out @animTime 1.5s;
       animation-fill-mode: forwards;
     }
     .head-desc {
       font-size: 16px;
       color: #666666;
       opacity: 0;
-      animation: animBottom ease-in-out 2s 4s;
+      animation: animBottom ease-in-out @animTime 0.5s;
       animation-fill-mode: forwards;
     }
     .right {
@@ -146,7 +147,7 @@ a {
           height: 450px;
           border-radius: 20px;
           opacity: 0;
-          animation: animBottom ease-in-out 2s;
+          animation: animBottom ease-in-out @animTime;
           animation-fill-mode: forwards;
         }
         .video-btn {
@@ -162,7 +163,7 @@ a {
           margin: -37px 0 0 -37px;
           box-sizing: border-box;
           opacity: 0;
-          animation: animUp ease-in-out 2s 1s;
+          animation: animUp ease-in-out @animTime 0.5s;
           animation-fill-mode: forwards;
           cursor: pointer;
           &::before {
@@ -183,7 +184,7 @@ a {
         right: 0;
         z-index: 1;
         opacity: 0;
-        animation: animBottom ease-in-out 2s 2s;
+        animation: animBottom ease-in-out @animTime 1s;
         animation-fill-mode: forwards;
       }
       .cptop {
@@ -204,7 +205,7 @@ a {
     position: relative;
     padding-right: 10px;
     opacity: 0;
-    animation: animLeft ease-in-out 2s 3s;
+    animation: animLeft ease-in-out @animTime 0.5s;
     animation-fill-mode: forwards;
     .layimg1 {
       width: 580px;
@@ -218,7 +219,7 @@ a {
       left: 0;
       top: 0;
       z-index: 2;
-      animation: updown linear 2s infinite alternate;
+      animation: updown linear @animTime infinite alternate;
       animation-fill-mode: forwards;
       img {
         width: 126px;
@@ -242,7 +243,7 @@ a {
       top: 26px;
       left: 260px;
       z-index: 2;
-      animation: updown linear 2s 1s infinite alternate;
+      animation: updown linear @animTime 0.5s infinite alternate;
       animation-fill-mode: forwards;
     }
     .layimg4 {
@@ -251,7 +252,7 @@ a {
       top: 85px;
       left: 352px;
       z-index: 2;
-      animation: updown linear 2s 2s infinite alternate;
+      animation: updown linear @animTime 1s infinite alternate;
       animation-fill-mode: forwards;
     }
     .circle {
@@ -268,7 +269,7 @@ a {
   .right {
     flex: 1;
     opacity: 0;
-    animation: animRight ease-in-out 2s 3s;
+    animation: animRight ease-in-out @animTime 0.5s;
     animation-fill-mode: forwards;
     .lay-title {
       text-align: right;
@@ -567,7 +568,8 @@ footer {
     bottom: -34px;
     opacity: 0;
     box-shadow: 0 10px 10px 1px rgba(252, 144, 112, 0.3);
-    animation: animBottom ease-in-out 2s 3s, updown linear 2s infinite alternate;
+    animation: animBottom ease-in-out @animTime 1s,
+      updown linear 2s infinite alternate;
     animation-fill-mode: forwards;
     cursor: pointer;
   }
@@ -584,20 +586,22 @@ footer {
     &.box1 {
       top: 13%;
       right: 40%;
-      animation: animUp linear 1s 2s, redLight linear 2s infinite alternate;
+      animation: animUp linear @animTime 1.5s,
+        redLight linear 2s infinite alternate;
       animation-fill-mode: forwards;
     }
     &.box2 {
       bottom: 25%;
       right: 53%;
-      animation: animUp linear 1s 2.5s,
-        redLight linear 2s 2.5s infinite alternate;
+      animation: animUp linear @animTime 2s,
+        redLight linear 2s 4s infinite alternate;
       animation-fill-mode: forwards;
     }
     &.box3 {
       bottom: 13%;
       right: 15%;
-      animation: animUp linear 1s 3s, redLight linear 2s 3s infinite alternate;
+      animation: animUp linear @animTime 2.5s,
+        redLight linear 2s 4s infinite alternate;
       animation-fill-mode: forwards;
     }
     img {
@@ -625,13 +629,13 @@ footer {
   .cp-icon1 {
     top: 40%;
     right: 60%;
-    animation: animBottom linear 1s 3.5s alternate;
+    animation: animBottom linear @animTime 3s alternate;
     animation-fill-mode: forwards;
   }
   .cp-icon2 {
     top: 40%;
     right: 52%;
-    animation: animBottom linear 1s 4s alternate;
+    animation: animBottom linear @animTime 3.5s alternate;
     animation-fill-mode: forwards;
   }
 }
@@ -664,11 +668,11 @@ footer {
   }
   &.cp-con1 {
     img {
-      animation: animLeft linear 3s 4s alternate;
+      animation: animLeft linear @animTime 2.5s alternate;
       animation-fill-mode: forwards;
     }
     .con-item {
-      animation: animRight linear 3s 4s alternate;
+      animation: animRight linear @animTime 2.5s alternate;
       animation-fill-mode: forwards;
     }
   }
@@ -1096,19 +1100,19 @@ footer {
 }
 
 .anim-up {
-  animation: animUp 2s ease-in-out;
+  animation: animUp @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-bottm {
-  animation: animBottom 2s ease-in-out;
+  animation: animBottom @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-left {
-  animation: animLeft 2s ease-in-out;
+  animation: animLeft @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-right {
-  animation: animRight 2s ease-in-out;
+  animation: animRight @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 @keyframes animUp {

@@ -1,4 +1,5 @@
 @rem: 25rem;
+@animTime: 1s;
 p,
 b,
 ul,
@@ -133,15 +134,15 @@ header {
         }
 
         &:first-child {
-          animation: animUp ease-in-out 2s;
+          animation: animUp ease-in-out @animTime;
           animation-fill-mode: forwards;
         }
         &:nth-child(2) {
-          animation: animUp ease-in-out 2s 1s;
+          animation: animUp ease-in-out @animTime 0.5s;
           animation-fill-mode: forwards;
         }
         &:nth-child(3) {
-          animation: animUp ease-in-out 2s 2s;
+          animation: animUp ease-in-out @animTime 1s;
           animation-fill-mode: forwards;
         }
       }
@@ -174,7 +175,7 @@ header {
       color: #999;
       text-align: center;
       opacity: 0;
-      animation: animUp ease-in-out 2s 3s;
+      animation: animUp ease-in-out @animTime 1.5s;
       animation-fill-mode: forwards;
     }
   }
@@ -185,7 +186,7 @@ header {
   margin-top: (-20 / @rem);
   position: relative;
   opacity: 0;
-  animation: animBottom ease-in-out 2s 3s;
+  animation: animBottom ease-in-out @animTime;
   animation-fill-mode: forwards;
   .video-img {
     z-index: 3;
@@ -249,7 +250,7 @@ header {
   text-align: center;
   padding-top: (20 / @rem);
   opacity: 0;
-  animation: animUp 3s 3s ease-in-out;
+  animation: animUp @animTime ease-in-out;
   animation-fill-mode: forwards;
   .lay-title-bg {
     height: (57 / @rem);
@@ -270,7 +271,7 @@ header {
     padding-right: (32 / @rem);
     white-space: nowrap;
     opacity: 0;
-    animation: animLeft 3s 3.5s ease-in-out;
+    animation: animLeft @animTime 0.5s ease-in-out;
     animation-fill-mode: forwards;
     .lay-txt-icon {
       width: (52 / @rem);
@@ -280,7 +281,7 @@ header {
   .lay-txt-desc {
     font-size: (16 / @rem);
     opacity: 0;
-    animation: animRight 3s 3.5s ease-in-out;
+    animation: animRight @animTime 0.5s ease-in-out;
     animation-fill-mode: forwards;
     p {
       font-weight: bold;
@@ -330,7 +331,7 @@ header {
   background-color: #edf1f5;
   margin-top: (60 / @rem);
   height: (262 / @rem);
-  opacity:0;
+  opacity: 0;
   .title {
     display: flex;
     align-items: center;
@@ -399,7 +400,7 @@ header {
   text-align: center;
   margin-top: (200 / @rem);
   padding-bottom: (60 / @rem);
-  opacity:0;
+  opacity: 0;
   .desc {
     color: #666;
     padding: 0 (16 / @rem) (26 / @rem);
@@ -513,7 +514,7 @@ footer {
     padding-top: (100 / @rem);
     img {
       width: 100%;
-      animation: animUp 2s ease-in-out;
+      animation: animUp @animTime ease-in-out;
     }
 
     .txt {
@@ -521,7 +522,7 @@ footer {
       top: (90 / @rem);
       left: (28 / @rem);
       opacity: 0;
-      animation: animUp 2s 1s ease-in-out;
+      animation: animUp @animTime 0.5s ease-in-out;
       animation-fill-mode: forwards;
       h3 {
         font-size: (30 / @rem);
@@ -549,20 +550,21 @@ footer {
       &.box1 {
         top: 52%;
         right: 30%;
-        animation: animUp linear 1s 2s, redLight linear 2s infinite alternate;
+        animation: animUp linear 1s 0.5s, redLight linear 2s infinite alternate;
         animation-fill-mode: forwards;
       }
       &.box2 {
         bottom: 5%;
         left: 20%;
-        animation: animUp linear 1s 2.5s,
+        animation: animUp linear 1s 1s,
           redLight linear 2s 2.5s infinite alternate;
         animation-fill-mode: forwards;
       }
       &.box3 {
         bottom: 10%;
         right: 3%;
-        animation: animUp linear 1s 3s, redLight linear 2s 3s infinite alternate;
+        animation: animUp linear 1s 1.5s,
+          redLight linear 2s 3s infinite alternate;
         animation-fill-mode: forwards;
       }
       img {
@@ -608,7 +610,7 @@ footer {
     }
 
     &.item2-1 {
-      animation: animBottom 2s 2s ease-in-out;
+      animation: animBottom @animTime 1s ease-in-out;
       animation-fill-mode: forwards;
     }
   }
@@ -618,7 +620,7 @@ footer {
   padding-top: (57 / @rem);
   h3 {
     padding: (12 / @rem) (10 / @rem);
-    animation: animUp 2s ease-in-out;
+    animation: animUp @animTime ease-in-out;
   }
   .art-list {
     li {
@@ -635,13 +637,13 @@ footer {
         height: (96 / @rem);
         background: #e4e4e4;
         margin-right: (10 / @rem);
-        animation: animLeft 2s ease-in-out;
+        animation: animLeft @animTime ease-in-out;
       }
 
       .art-right {
         flex: 1;
         overflow: hidden;
-        animation: animRight 2s ease-in-out;
+        animation: animRight @animTime ease-in-out;
       }
       h4 {
         font-size: (16 / @rem);
@@ -672,14 +674,14 @@ footer {
       width: (188 / @rem);
       height: auto;
       margin-left: auto;
-      animation: animUp 3s ease-in-out;
+      animation: animUp @animTime ease-in-out;
     }
     .txt {
       font-size: (24 / @rem);
       position: absolute;
       left: (25 / @rem);
       top: (100 / @rem);
-      animation: animUp 3s ease-in-out;
+      animation: animUp @animTime ease-in-out;
       &::after {
         display: block;
         content: "What do we serve";
@@ -689,7 +691,7 @@ footer {
       }
     }
     .cover-out {
-      animation: animBottom 3s ease-in-out;
+      animation: animBottom @animTime ease-in-out;
     }
     .cover {
       background-color: #ff6f45;
@@ -716,12 +718,12 @@ footer {
         padding-right: (5 / @rem);
         padding-top: (5 / @rem);
         opacity: 0;
-        animation: animLeft 3s 1s ease-in-out;
+        animation: animLeft @animTime 0.5s ease-in-out;
         animation-fill-mode: forwards;
       }
       p {
         opacity: 0;
-        animation: animRight 3s 1s ease-in-out;
+        animation: animRight @animTime 0.5s ease-in-out;
         animation-fill-mode: forwards;
       }
     }
@@ -729,7 +731,7 @@ footer {
   .login {
     padding-bottom: (40 / @rem);
     opacity: 0;
-    animation: animBottom 3s 2s ease-in-out;
+    animation: animBottom @animTime 1s ease-in-out;
     animation-fill-mode: forwards;
 
     h3 {
@@ -799,7 +801,7 @@ footer {
     display: block;
     width: 100%;
     height: auto;
-    animation: animUp 3s ease-in-out;
+    animation: animUp @animTime ease-in-out;
   }
   .text {
     width: 80%;
@@ -811,7 +813,7 @@ footer {
     position: relative;
     overflow: hidden;
     opacity: 0;
-    animation: animUp 3s 0.5s ease-in-out;
+    animation: animUp @animTime 0.5s ease-in-out;
     animation-fill-mode: forwards;
     h3 {
       position: relative;
@@ -834,7 +836,7 @@ footer {
     padding: (20 / @rem);
     line-height: (22 / @rem);
     opacity: 0;
-    animation: animUp 3s 1.5s ease-in-out;
+    animation: animUp @animTime 1s ease-in-out;
     animation-fill-mode: forwards;
   }
   .title {
@@ -920,21 +922,20 @@ footer {
   }
 }
 
-
 .anim-up {
-  animation: animUp 2s ease-in-out;
+  animation: animUp @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-bottom {
-  animation: animBottom 2s ease-in-out;
+  animation: animBottom @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-left {
-  animation: animLeft 2s ease-in-out;
+  animation: animLeft @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-right {
-  animation: animRight 2s ease-in-out;
+  animation: animRight @animTime ease-in-out;
   animation-fill-mode: forwards;
 }
 @keyframes animUp {

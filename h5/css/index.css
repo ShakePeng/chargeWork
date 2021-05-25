@@ -116,15 +116,15 @@ header .banList a {
   white-space: nowrap;
 }
 .sy .top .head-top .head-txt:first-child {
-  animation: animUp ease-in-out 2s;
+  animation: animUp ease-in-out 1s;
   animation-fill-mode: forwards;
 }
 .sy .top .head-top .head-txt:nth-child(2) {
-  animation: animUp ease-in-out 2s 1s;
+  animation: animUp ease-in-out 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .sy .top .head-top .head-txt:nth-child(3) {
-  animation: animUp ease-in-out 2s 2s;
+  animation: animUp ease-in-out 1s 1s;
   animation-fill-mode: forwards;
 }
 .sy .top .head-top .pop {
@@ -155,7 +155,7 @@ header .banList a {
   color: #999;
   text-align: center;
   opacity: 0;
-  animation: animUp ease-in-out 2s 3s;
+  animation: animUp ease-in-out 1s 1.5s;
   animation-fill-mode: forwards;
 }
 .videoItem {
@@ -163,7 +163,7 @@ header .banList a {
   margin-top: -0.8rem;
   position: relative;
   opacity: 0;
-  animation: animBottom ease-in-out 2s 3s;
+  animation: animBottom ease-in-out 1s;
   animation-fill-mode: forwards;
 }
 .videoItem .video-img {
@@ -225,7 +225,7 @@ header .banList a {
   text-align: center;
   padding-top: 0.8rem;
   opacity: 0;
-  animation: animUp 3s 3s ease-in-out;
+  animation: animUp 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .lay-title .lay-title-bg {
@@ -247,7 +247,7 @@ header .banList a {
   padding-right: 1.28rem;
   white-space: nowrap;
   opacity: 0;
-  animation: animLeft 3s 3.5s ease-in-out;
+  animation: animLeft 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .lay-item .lay-left .lay-txt-icon {
@@ -257,7 +257,7 @@ header .banList a {
 .lay-item .lay-txt-desc {
   font-size: 0.64rem;
   opacity: 0;
-  animation: animRight 3s 3.5s ease-in-out;
+  animation: animRight 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .lay-item .lay-txt-desc p {
@@ -469,14 +469,14 @@ footer .copyright {
 }
 .cp .item1 img {
   width: 100%;
-  animation: animUp 2s ease-in-out;
+  animation: animUp 1s ease-in-out;
 }
 .cp .item1 .txt {
   position: absolute;
   top: 3.6rem;
   left: 1.12rem;
   opacity: 0;
-  animation: animUp 2s 1s ease-in-out;
+  animation: animUp 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .cp .item1 .txt h3 {
@@ -503,19 +503,19 @@ footer .copyright {
 .cp .item1 .cp-icon-box.box1 {
   top: 52%;
   right: 30%;
-  animation: animUp linear 1s 2s, redLight linear 2s infinite alternate;
+  animation: animUp linear 1s 0.5s, redLight linear 2s infinite alternate;
   animation-fill-mode: forwards;
 }
 .cp .item1 .cp-icon-box.box2 {
   bottom: 5%;
   left: 20%;
-  animation: animUp linear 1s 2.5s, redLight linear 2s 2.5s infinite alternate;
+  animation: animUp linear 1s 1s, redLight linear 2s 2.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 .cp .item1 .cp-icon-box.box3 {
   bottom: 10%;
   right: 3%;
-  animation: animUp linear 1s 3s, redLight linear 2s 3s infinite alternate;
+  animation: animUp linear 1s 1.5s, redLight linear 2s 3s infinite alternate;
   animation-fill-mode: forwards;
 }
 .cp .item1 .cp-icon-box img {
@@ -556,7 +556,7 @@ footer .copyright {
   padding-bottom: 0.8rem;
 }
 .cp .item2.item2-1 {
-  animation: animBottom 2s 2s ease-in-out;
+  animation: animBottom 1s 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .dt {
@@ -564,7 +564,7 @@ footer .copyright {
 }
 .dt h3 {
   padding: 0.48rem 0.4rem;
-  animation: animUp 2s ease-in-out;
+  animation: animUp 1s ease-in-out;
 }
 .dt .art-list li {
   padding: 0.68rem 0.4rem;
@@ -579,12 +579,12 @@ footer .copyright {
   height: 3.84rem;
   background: #e4e4e4;
   margin-right: 0.4rem;
-  animation: animLeft 2s ease-in-out;
+  animation: animLeft 1s ease-in-out;
 }
 .dt .art-list li .art-right {
   flex: 1;
   overflow: hidden;
-  animation: animRight 2s ease-in-out;
+  animation: animRight 1s ease-in-out;
 }
 .dt .art-list li h4 {
   font-size: 0.64rem;
@@ -613,14 +613,14 @@ footer .copyright {
   width: 7.52rem;
   height: auto;
   margin-left: auto;
-  animation: animUp 3s ease-in-out;
+  animation: animUp 1s ease-in-out;
 }
 .md .top .txt {
   font-size: 0.96rem;
   position: absolute;
   left: 1rem;
   top: 4rem;
-  animation: animUp 3s ease-in-out;
+  animation: animUp 1s ease-in-out;
 }
 .md .top .txt::after {
   display: block;
@@ -630,7 +630,7 @@ footer .copyright {
   opacity: 0.16;
 }
 .md .top .cover-out {
-  animation: animBottom 3s ease-in-out;
+  animation: animBottom 1s ease-in-out;
 }
 .md .top .cover {
   background-color: #ff6f45;
@@ -656,18 +656,18 @@ footer .copyright {
   padding-right: 0.2rem;
   padding-top: 0.2rem;
   opacity: 0;
-  animation: animLeft 3s 1s ease-in-out;
+  animation: animLeft 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .md .list .list-item p {
   opacity: 0;
-  animation: animRight 3s 1s ease-in-out;
+  animation: animRight 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .md .login {
   padding-bottom: 1.6rem;
   opacity: 0;
-  animation: animBottom 3s 2s ease-in-out;
+  animation: animBottom 1s 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .md .login h3 {
@@ -728,7 +728,7 @@ footer .copyright {
   display: block;
   width: 100%;
   height: auto;
-  animation: animUp 3s ease-in-out;
+  animation: animUp 1s ease-in-out;
 }
 .gy .text {
   width: 80%;
@@ -740,7 +740,7 @@ footer .copyright {
   position: relative;
   overflow: hidden;
   opacity: 0;
-  animation: animUp 3s 0.5s ease-in-out;
+  animation: animUp 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .gy .text h3 {
@@ -763,7 +763,7 @@ footer .copyright {
   padding: 0.8rem;
   line-height: 0.88rem;
   opacity: 0;
-  animation: animUp 3s 1.5s ease-in-out;
+  animation: animUp 1s 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .gy .title {
@@ -845,19 +845,19 @@ footer .copyright {
   max-width: 12rem;
 }
 .anim-up {
-  animation: animUp 2s ease-in-out;
+  animation: animUp 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-bottom {
-  animation: animBottom 2s ease-in-out;
+  animation: animBottom 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-left {
-  animation: animLeft 2s ease-in-out;
+  animation: animLeft 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 .anim-right {
-  animation: animRight 2s ease-in-out;
+  animation: animRight 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 @keyframes animUp {
