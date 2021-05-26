@@ -496,6 +496,10 @@ footer .linker .link-item {
 footer .linker .link-item .active {
   font-size: 16px;
 }
+footer .linker .link-item a:hover {
+  text-decoration: underline;
+  color: #ff6f45;
+}
 footer .copyright {
   font-size: 12px;
   padding: 16px 0;
@@ -509,15 +513,16 @@ footer .copyright {
   z-index: 3;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 6px 15px;
+  padding: 15px;
 }
 .consult img {
-  width: 77px;
-  height: 77px;
+  width: 140px;
+  height: 140px;
 }
 .consult .txt {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #666;
   font-size: 14px;
   line-height: 18px;
@@ -851,7 +856,7 @@ footer .copyright {
   left: 10px;
   top: 8px;
   color: #999;
-  transition: all linear 0.5s;
+  transition: all linear 0.2s;
   font-weight: normal;
 }
 .md-in .login .login-item input {

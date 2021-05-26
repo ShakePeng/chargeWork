@@ -42,7 +42,6 @@ function scrollFn() {
     let mdTxt = $('.md-txt2');
     let login = $('.login');
 
-    let dt1 = $('.dt-list').eq(1).length > 0 ? $('.dt-list').eq(1).offset().top - 700 : 0;
     let dt2 = $('.dt-list').eq(2).length > 0 ? $('.dt-list').eq(2).offset().top -700 : 0;
 
     let md2 = $('.cp-con').eq(1).length > 0 ? $('.cp-con').eq(1).offset().top -700 : 0;
@@ -81,15 +80,6 @@ function scrollFn() {
             $('.cp-con .con-item').eq(2).addClass('anim-right');
         }
 
-        //  门店动态
-        if(scrollTop >= dt1){
-            $('.dt-txt',$('.dt-list').eq(1)).addClass('anim-left');
-            $('img',$('.dt-list').eq(1)).addClass('anim-right');
-        }
-        if(scrollTop >= dt2){
-            $('.dt-txt',$('.dt-list').eq(2)).addClass('anim-right');
-            $('img',$('.dt-list').eq(2)).addClass('anim-left');
-        }
         // 门店入驻
         if(scrollTop >= mdTop){
             mdTxt.addClass('anim-up');
