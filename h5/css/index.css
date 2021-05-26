@@ -655,6 +655,7 @@ footer .copyright {
   height: 0.76rem;
   padding-right: 0.2rem;
   padding-top: 0.2rem;
+  box-sizing: border-box;
   opacity: 0;
   animation: animLeft 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
@@ -769,6 +770,7 @@ footer .copyright {
 .gy .title {
   font-size: 0.64rem;
   padding: 0.56rem 0.8rem;
+  text-align: center;
 }
 .gy .desc-item {
   padding: 0 0.8rem 1.2rem;
